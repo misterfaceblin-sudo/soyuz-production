@@ -3,97 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Союз продакшен — Просмотр видео</title>
+    <title>Союз продакшен — Просмотр</title>
     <style>
-        :root {
-            --bg: #0a0a0b;
-            --card: #161618;
-            --accent: #ffcc00;
-            --text: #f5f5f7;
+        body { background: #0a0a0b; color: #fff; font-family: sans-serif; text-align: center; padding: 20px; }
+        .video-container { max-width: 900px; margin: 0 auto; }
+        iframe { width: 100%; aspect-ratio: 16/9; border-radius: 15px; border: none; }
+        #tg-comments-block { 
+            max-width: 900px; 
+            margin: 40px auto; 
+            background: #161618; 
+            padding: 20px; 
+            border-radius: 15px; 
+            min-height: 200px;
         }
-
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 900px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover { opacity: 0.7; }
-
-        .video-player {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            border-radius: 20px;
-            overflow: hidden;
-            background: #000;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
-        }
-
-        .video-player iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%; border: 0;
-        }
-
-        h1 { font-size: 1.8rem; margin-bottom: 10px; color: #fff; }
-        .description { color: #888; margin-bottom: 40px; }
-
-        /* Стили для блока комментариев */
-        #tg-comments-block {
-            background: var(--card);
-            padding: 20px;
-            border-radius: 20px;
-            border: 1px solid #2c2c2e;
-            min-height: 400px;
-        }
+        .back-link { display: block; margin-bottom: 20px; color: #ffcc00; text-decoration: none; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <a href="index.html" class="back-btn">← Назад в архив «Союз продакшен»</a>
-    
-    <div class="video-player">
-        <iframe src="https://www.youtube.com/embed/gWBGWNmvX_s" allowfullscreen></iframe>
-    </div>
-
+<div class="video-container">
+    <a href="index.html" class="back-link">← Назад в архив</a>
     <h1>Дубляж Союза Продакшен - Плохой маскот</h1>
-    <p class="description">Озвучка от команды Союз продакшен. Оставляйте реакции и комменты ниже!</p>
+    
+    <iframe src="https://www.youtube.com/embed/gWBGWNmvX_s" allowfullscreen></iframe>
 
-   <div id="tg-comments-block">
-    <script async src="https://comments.app/js/widget.js?3" 
-        data-comments-app-js="qR8cZlfz" 
-        data-limit="10" 
-        data-color="FFCC00" 
-        data-dislikes="1" 
-        data-outlined="1" 
-        data-dark="1">
-    </script>
+    <div id="tg-comments-block">
+        <h3>Ваше мнение (очень важно для нас)</h3>
+        <script async src="https://comments.app/js/widget.js?3" 
+            data-comments-app-js="qR8cZlfz" 
+            data-limit="10" 
+            data-color="FFCC00" 
+            data-dislikes="1" 
+            data-outlined="1" 
+            data-dark="1">
+        </script>
+    </div>
 </div>
-
-<footer>
-    <p style="margin-top: 50px; color: #444;">© 2026 Союз продакшен</p>
-</footer>
 
 </body>
 </html>
